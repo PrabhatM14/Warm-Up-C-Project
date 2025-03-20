@@ -1,0 +1,26 @@
+➜  ppm54-p01 ls -l L2Test
+-rw-r--r--@ 1 prabhat  staff  10485760 Feb 23 01:58 L2Test
+
+➜  ppm54-p01 time ./p01 L2Test "abc"    
+time ./p01 L2Test "abc" --systemcalls
+627
+./p01 L2Test "abc"  0.05s user 0.01s system 94% cpu 0.063 total
+627
+./p01 L2Test "abc" --systemcalls  1.20s user 3.19s system 99% cpu 4.402 total
+
+➜  ppm54-p01 
+
+
+
+
+L2Test -> 10.5 MB file (for some reason, a strictly 10MB file was not working)
+
+Run 1:
+- It took 0.05 seconds for the program to execute my input
+- It took 0.01 seconds for the program to execute the rest of the code
+- In total it took 0.063 seconds and 94% of my CPU to run the full program without system calls
+
+Run 2:
+- It took 1.20 seconds for the program to execute my input
+- It took 3.19 seconds for the program to execute the rest of the code
+- In total, it took 4.402 seconds and 99% of my CPU to run the full program with system calls
